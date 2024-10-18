@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: evento-service
+          uri: lb://evento-service/
+          predicates:
+            - Path=/eventos/**
+        - id: eventoCB
+          uri: lb://eventoCB/
+          predicates:
+            - Path=/eventosCB/**
