@@ -6,7 +6,7 @@ spring:
     gateway:
       routes:
         - id: evento
-          uri: lb://evento/
+          uri: lb://evento-service/
           predicates:
             - Path=/evento/**
         - id: eventoCB
