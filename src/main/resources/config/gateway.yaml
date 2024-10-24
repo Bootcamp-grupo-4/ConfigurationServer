@@ -9,7 +9,7 @@ spring:
           uri: lb://evento/
           predicates:
             - Path=/evento/**
-        - id: eventoCB
-          uri: lb://eventoCB/
+        - id: ventaentradas
+          uri: lb://ventaentradas/
           predicates:
-            - Path=/eventosCB/**
+            - Path=/ventaentradas/**
